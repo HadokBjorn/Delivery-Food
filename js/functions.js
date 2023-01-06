@@ -1,4 +1,5 @@
 const button = document.getElementById('button');
+const textButton = document.getElementById('text-button');
 let priceFood = 0;
 let priceDrink = 0;
 let priceDessert = 0;
@@ -6,6 +7,7 @@ let priceDessert = 0;
 function verifySection(){
     if (priceFood > 0 && priceDrink > 0 && priceDessert > 0){
         button.classList.add('button-active');
+        textButton.innerHTML = 'Fechar Pedido';
     }
 }
 
