@@ -37,7 +37,7 @@ font-style: normal;
     line-height: 21px;
 }
 .main{
-    width: 100%;
+    width: -webkit-fill-available;
     padding-top: 4px;
     margin-top: 92px;
     margin-bottom: 92px;
@@ -192,6 +192,9 @@ font-style: normal;
     .header{
         width: 414px;
         left: auto;
+    }
+    .main{
+        width: inherit;
     }
     .food, .drinks, .dessert{
         width: 395px;
