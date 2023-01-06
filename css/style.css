@@ -193,9 +193,6 @@ font-style: normal;
         width: 414px;
         left: auto;
     }
-    .main{
-        width: inherit;
-    }
     .food, .drinks, .dessert{
         width: 395px;
     }
