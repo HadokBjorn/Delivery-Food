@@ -25,31 +25,31 @@ let foodContainer = [
         img: './img/frango_yin_yang.png',
         name:'Frango Yin Yang',
         description:'Um pouco de batata, um pouco de salada',
-        price: '14,90',
+        price: '44,90',
     },
     {
         img: './img/frango_yin_yang.png',
         name:'Frango Yin Yang',
         description:'Um pouco de batata, um pouco de salada',
-        price: '14,90',
+        price: '34,90',
     },
     {
         img: './img/frango_yin_yang.png',
         name:'Frango Yin Yang',
         description:'Um pouco de batata, um pouco de salada',
-        price: '14,90',
+        price: '16,90',
     },
     {
         img: './img/frango_yin_yang.png',
         name:'Frango Yin Yang',
         description:'Um pouco de batata, um pouco de salada',
-        price: '14,90',
+        price: '22,90',
     },
     {
         img: './img/frango_yin_yang.png',
         name:'Frango Yin Yang',
         description:'Um pouco de batata, um pouco de salada',
-        price: '14,90',
+        price: '24,90',
     },
 ];
 
@@ -115,43 +115,43 @@ let dessertContainer = [
         img: './img/pudim.png',
         name:'Pudim',
         description:'Apenas pudim',
-        price: '7,90',
+        price: '4,90',
     },
     {
         img: './img/pudim.png',
         name:'Pudim',
         description:'Apenas pudim',
-        price: '7,90',
+        price: '3,90',
     },
     {
         img: './img/pudim.png',
         name:'Pudim',
         description:'Apenas pudim',
-        price: '7,90',
+        price: '2,90',
     },
     {
         img: './img/pudim.png',
         name:'Pudim',
         description:'Apenas pudim',
-        price: '7,90',
+        price: '9,90',
     },
     {
         img: './img/pudim.png',
         name:'Pudim',
         description:'Apenas pudim',
-        price: '7,90',
+        price: '13,90',
     },
     {
         img: './img/pudim.png',
         name:'Pudim',
         description:'Apenas pudim',
-        price: '7,90',
+        price: '17,90',
     },
     {
         img: './img/pudim.png',
         name:'Pudim',
         description:'Apenas pudim',
-        price: '7,90',
+        price: '5,90',
     },
 ];
 
@@ -161,7 +161,7 @@ let foodCards=``;
         let foodCard = `
         <div class="card-food" alt="Prato Principal" onclick="selectFood(this)">
             <img src="${foodContainer[i].img}"/>
-            <h1>${foodContainer[i].name}</h1>
+            <h1 class="name-food">${foodContainer[i].name}</h1>
             <p>${foodContainer[i].description}</p>
             <div class="value-icon">
                 <p class="price-food">R$ ${foodContainer[i].price}</p>
@@ -182,7 +182,7 @@ function addCardDrink(){
             let drinkCard = `
             <div class="card-food" alt="Prato Principal" onclick="selectDrink(this)">
                 <img src="${drinkContainer[i].img}"/>
-                <h1>${drinkContainer[i].name}</h1>
+                <h1 class="name-food">${drinkContainer[i].name}</h1>
                 <p>${drinkContainer[i].description}</p>
                 <div class="value-icon">
                     <p class="price-food">R$ ${drinkContainer[i].price}</p>
@@ -203,7 +203,7 @@ function addCardDessert(){
             let dessertCard = `
             <div class="card-food" alt="Prato Principal" onclick="selectDessert(this)">
                 <img src="${dessertContainer[i].img}"/>
-                <h1>${dessertContainer[i].name}</h1>
+                <h1 class="name-food">${dessertContainer[i].name}</h1>
                 <p>${dessertContainer[i].description}</p>
                 <div class="value-icon">
                     <p class="price-food">R$ ${dessertContainer[i].price}</p>
