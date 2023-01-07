@@ -69,7 +69,6 @@ function priceProduct(){
         priceFood = cardsAtivos[0].textContent.replace('R$ ', '').replace(',', '.');
         priceDrink = cardsAtivos[1].textContent.replace('R$ ', '').replace(',', '.');
         priceDessert = cardsAtivos[2].textContent.replace('R$ ', '').replace(',', '.');
-        console.log(priceFood,priceDrink,priceDessert);
         total = Number(priceFood) + Number(priceDrink) + Number(priceDessert);
         total = total.toFixed(2);
         }
@@ -120,8 +119,8 @@ function sendOrder(){
     - Bebida: ${drinkName}\n
     - Sobremesa: ${dessertName}\n
     Total: R$ ${total.replace('.',',')}\n
-    Nome: Fulano\n
-    Endereço: Rua
+    Nome: ${clientName}.\n
+    Endereço: ${adress}.
     `;
 
     texto = window.encodeURIComponent(texto);
