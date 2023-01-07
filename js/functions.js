@@ -1,7 +1,9 @@
-const main = document.querySelector('.main');
+const container = document.getElementById('container');
 const cardOrder = document.getElementById('card-order');
 const button = document.getElementById('button');
 const textButton = document.getElementById('text-button');
+let clientName = ``;
+let adress = ``;
 let foodName = ``;
 let drinkName = ``;
 let dessertName = ``;
@@ -17,7 +19,6 @@ function verifySection(){
         button.disabled = false;
         textButton.innerHTML = 'Fechar Pedido';
         priceProduct();
-        OrderDetails()
     }
 }
 
@@ -54,8 +55,13 @@ function selectDessert(selected){
 }
 
 function clickButton(){
+    clientName = prompt("Informe seu nome:");
+    adress = prompt("Informe seu endereço:");
+
     cardOrder.classList.remove('hidden');
-    main.classList.add('opaco');
+    container.classList.add('opaco');
+    OrderDetails()
+
 }
 function priceProduct(){
     const cardsAtivos = document.querySelectorAll('.active .price-food');
@@ -90,15 +96,36 @@ function OrderDetails(){
                     <p>${dessertName}</p>
                     <p>${priceDessert.replace('.',',')}</p>
                 </div>
-                <div>
-                    <p>total</p>
+                <div class="total">
+                    <p>TOTAL</p>
                     <p>R$ ${total.replace('.',',')}</p>
                 </div>
-                <button id="order">Tudo certo, pode pedir!</button>
+                <div class="adress">
+                    <p>Nome: ${clientName}</p>
+                    <p class="endereco" >Endereço: ${adress}</p>
+                </div>
+                <button id="order" onclick="sendOrder()" >Tudo certo, pode pedir!</button>
                 <button id="cancel" onclick="reloadPage()" >Cancelar</button>
     `
 }
 
 function reloadPage(){
     window.location.reload(true);
+}
+
+function sendOrder(){
+    let texto = `
+    Olá, gostaria de fazer o pedido:\n
+    - Prato: ${foodName}\n
+    - Bebida: ${drinkName}\n
+    - Sobremesa: ${dessertName}\n
+    Total: R$ ${total.replace('.',',')}\n
+    Nome: Fulano\n
+    Endereço: Rua
+    `
+
+    //texto = window.encodeURIComponent(texto);
+    console.log(texto);
+
+
 }

@@ -48,7 +48,7 @@ font-style: normal;
     flex-wrap: wrap;
 }
 .opaco{
-    opacity: 0.1;
+    opacity: 0.21;
 }
 .title-category{
     font-family: 'Righteous';
@@ -184,7 +184,6 @@ button:enabled{
     width: 230px;
 }
 .card-order{
-    height: 353px;
     border-radius: 9px;
     position: fixed;
     top: calc(50% - 353px/2 - 0.5px);
@@ -218,9 +217,18 @@ button:enabled{
 }
 .card-order > div{
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
-    margin: 0 25px;
+    margin: 0 15px;
+}
+.total{
+    font-weight: 700;
+}
+.adress{
+    flex-direction: column;
+}
+.adress > .endereco{
+    height: 65px;
 }
 #order{
     font-weight: 700;
@@ -230,8 +238,7 @@ button:enabled{
     border: none;
     background: #FFFFFF;
     border-radius: 100px;
-    margin: 0 24px;
-
+    margin: 0 8px;
 
     color: #50D074;
 }
@@ -265,5 +272,11 @@ button:enabled{
         height: 353px;
         left: auto;
         right: auto;
+    }
+    .card-order > div{
+        margin: 0 25px;
+    }    
+    #order{
+    margin: 0 24px;
     }
 }
