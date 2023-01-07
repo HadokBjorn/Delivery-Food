@@ -159,12 +159,12 @@ function addCardFood(){
 let foodCards=``;
     for (let i = 0; i < foodContainer.length; i++) {
         let foodCard = `
-        <div class="card-food" alt="Prato Principal" onclick="selectFood(this)">
+        <div data-test="dish" class="card-food" alt="Prato Principal" onclick="selectFood(this)">
             <img src="${foodContainer[i].img}"/>
-            <h1 class="name-food">${foodContainer[i].name}</h1>
+            <h1 data-test="item-name" class="name-food">${foodContainer[i].name}</h1>
             <p>${foodContainer[i].description}</p>
             <div class="value-icon">
-                <p class="price-food">R$ ${foodContainer[i].price}</p>
+                <p data-test="item-price" class="price-food">R$ ${foodContainer[i].price}</p>
                 <ion-icon name="checkmark-circle"></ion-icon>
             </div>
         </div>
@@ -180,12 +180,12 @@ function addCardDrink(){
     let drinkCards=``;
         for (let i = 0; i < drinkContainer.length; i++) {
             let drinkCard = `
-            <div class="card-food" alt="Prato Principal" onclick="selectDrink(this)">
+            <div data-test="drink" class="card-food" alt="Prato Principal" onclick="selectDrink(this)">
                 <img src="${drinkContainer[i].img}"/>
-                <h1 class="name-food">${drinkContainer[i].name}</h1>
+                <h1 data-test="item-name" class="name-food">${drinkContainer[i].name}</h1>
                 <p>${drinkContainer[i].description}</p>
                 <div class="value-icon">
-                    <p class="price-food">R$ ${drinkContainer[i].price}</p>
+                    <p data-test="item-price" class="price-food">R$ ${drinkContainer[i].price}</p>
                     <ion-icon name="checkmark-circle"></ion-icon>
                 </div>
             </div>
@@ -201,12 +201,12 @@ function addCardDessert(){
     let dessertCards=``;
         for (let i = 0; i < dessertContainer.length; i++) {
             let dessertCard = `
-            <div class="card-food" alt="Prato Principal" onclick="selectDessert(this)">
+            <div data-test="dessert" class="card-food" alt="Prato Principal" onclick="selectDessert(this)">
                 <img src="${dessertContainer[i].img}"/>
-                <h1 class="name-food">${dessertContainer[i].name}</h1>
+                <h1 data-test="item-name" class="name-food">${dessertContainer[i].name}</h1>
                 <p>${dessertContainer[i].description}</p>
                 <div class="value-icon">
-                    <p class="price-food">R$ ${dessertContainer[i].price}</p>
+                    <p data-test="item-price" class="price-food">R$ ${dessertContainer[i].price}</p>
                     <ion-icon name="checkmark-circle"></ion-icon>
                 </div>
             </div>
@@ -216,3 +216,6 @@ function addCardDessert(){
         desserts.innerHTML += dessertCards;
 }
 addCardDessert();
+
+
+

@@ -104,8 +104,8 @@ function OrderDetails(){
                     <p>Nome: ${clientName}</p>
                     <p class="endereco" >Endereço: ${adress}</p>
                 </div>
-                <button id="order" onclick="sendOrder()" >Tudo certo, pode pedir!</button>
-                <button id="cancel" onclick="reloadPage()" >Cancelar</button>
+                <button data-test="confirm-order-btn" id="order" onclick="sendOrder()" >Tudo certo, pode pedir!</button>
+                <button data-test="cancel-order-btn" id="cancel" onclick="reloadPage()" >Cancelar</button>
     `
 }
 
@@ -122,10 +122,8 @@ function sendOrder(){
     Total: R$ ${total.replace('.',',')}\n
     Nome: Fulano\n
     Endereço: Rua
-    `
+    `;
 
-    //texto = window.encodeURIComponent(texto);
-    console.log(texto);
-
-
+    texto = window.encodeURIComponent(texto);
+    window.open(`https://wa.me/551140028922?text=${texto}`);
 }

@@ -40,10 +40,10 @@
                 </article>
             </main>
             <footer class="footer">
-                <button id="button" disabled onclick="clickButton()"><p id="text-button">Selecione os 3 itens para fechar o pedido</p></button>
+                <button data-test="order-btn" id="button" disabled onclick="clickButton()"><p id="text-button">Selecione os 3 itens para fechar o pedido</p></button>
             </footer>
         </section>
-        <article id="card-order" class="card-order hidden">
+        <article data-test="confirm-order-modal" id="card-order" class="card-order hidden">
             <!--Entrada via js-->
         </article>
         <script src="./js/main.js"></script>
