@@ -2,7 +2,7 @@ const foods = document.querySelector('.food');
 const drinks = document.querySelector('.drinks');
 const desserts = document.querySelector('.dessert');
 
-let foodContainer = [
+const foodContainer = [
     {
         img: './img/foods/hamburguer-sanduiche.jpg',
         name:'Hamburguer',
@@ -53,7 +53,7 @@ let foodContainer = [
     },
 ];
 
-let drinkContainer = [
+const drinkContainer = [
     {
         img: './img/drinks/coca-drink.jpg',
         name:'Coca-Cola',
@@ -104,7 +104,7 @@ let drinkContainer = [
     },
 ];
 
-let dessertContainer = [
+const dessertContainer = [
     {
         img: './img/desserts/petigatou.png',
         name:'petit gateau',
@@ -158,7 +158,7 @@ let dessertContainer = [
 function addCardFood(){
 let foodCards=``;
     for (let i = 0; i < foodContainer.length; i++) {
-        let foodCard = `
+        const foodCard = `
         <div data-test="dish" class="card-food" alt="Prato Principal" onclick="selectFood(this)">
             <img src="${foodContainer[i].img}"/>
             <h1 data-test="item-name" class="name-food">${foodContainer[i].name}</h1>
@@ -179,7 +179,7 @@ addCardFood();
 function addCardDrink(){
     let drinkCards=``;
         for (let i = 0; i < drinkContainer.length; i++) {
-            let drinkCard = `
+            const drinkCard = `
             <div data-test="drink" class="card-food" alt="Prato Principal" onclick="selectDrink(this)">
                 <img src="${drinkContainer[i].img}"/>
                 <h1 data-test="item-name" class="name-food">${drinkContainer[i].name}</h1>
@@ -200,7 +200,7 @@ addCardDrink();
 function addCardDessert(){
     let dessertCards=``;
         for (let i = 0; i < dessertContainer.length; i++) {
-            let dessertCard = `
+            const dessertCard = `
             <div data-test="dessert" class="card-food" alt="Prato Principal" onclick="selectDessert(this)">
                 <img src="${dessertContainer[i].img}"/>
                 <h1 data-test="item-name" class="name-food">${dessertContainer[i].name}</h1>
