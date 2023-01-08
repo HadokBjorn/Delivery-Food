@@ -1,7 +1,7 @@
-const container = document.getElementById('container');
 const cardOrder = document.getElementById('card-order');
 const button = document.getElementById('button');
 const textButton = document.getElementById('text-button');
+const blockScreen = document.getElementById('back-modal');
 let clientName = ``;
 let adress = ``;
 let foodName = ``;
@@ -57,9 +57,17 @@ function selectDessert(selected){
 function clickButton(){
     clientName = prompt("Informe seu nome:");
     adress = prompt("Informe seu endereço:");
+    if (clientName === null){
+        clientName = "Não informado";
+    };
 
+    while(adress === null || adress === ''){
+        alert("Sem seu endereço não podemos entregar seu pedido.\n Por favor, informe seu endereço.");
+        adress = prompt("Informe seu endereço");
+        }
+
+    blockScreen.classList.add('back-modal-active');
     cardOrder.classList.remove('hidden');
-    container.classList.add('opaco');
     OrderDetails()
 
 }

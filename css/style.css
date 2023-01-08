@@ -47,9 +47,6 @@ font-style: normal;
     justify-content: space-between;
     flex-wrap: wrap;
 }
-.opaco{
-    opacity: 0.21;
-}
 .title-category{
     font-family: 'Righteous';
     font-style: normal;
@@ -67,12 +64,9 @@ font-style: normal;
     width: 100%;
     display: flex;
     overflow: auto;
-    overflow-x: scroll;
+    overflow-x: hidden;
     -ms-overflow-style: none;  
     scrollbar-width: none;
-}
-.food:-webkit-scrollbar, .drinks:-webkit-scrollbar, .dessert:-webkit-scrollbar{
-    display: none;
 }
 .card-food{
     width: 172px;
@@ -184,13 +178,21 @@ button:enabled{
 .footer > button > p{
     width: 230px;
 }
+.back-modal-active{
+    width: 420px;
+    background-color: rgba(255, 255, 255, 0.9);
+    z-index: 4;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+}
 .card-order{
     border-radius: 9px;
     position: fixed;
     top: calc(50% - 353px/2 - 0.5px);
     left: 19px;
     right: 19px;
-    z-index: 4;
+    z-index: 5;
 
     background: #50D074;
     box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.25);
@@ -263,6 +265,8 @@ button:enabled{
     }
     .food, .drinks, .dessert{
         width: 395px;
+        overflow-x: scroll;
+
     }
     .footer{
         width: 414px;
