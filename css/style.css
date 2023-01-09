@@ -231,6 +231,7 @@ button:enabled{
 }
 .adress > .endereco{
     height: 65px;
+    margin-bottom: 24px;
 }
 #order{
     font-weight: 700;
