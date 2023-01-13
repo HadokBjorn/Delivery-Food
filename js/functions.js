@@ -57,7 +57,7 @@ function selectDessert(selected){
 function clickButton(){
     clientName = prompt("Informe seu nome:");
     adress = prompt("Informe seu endereço:");
-    if (clientName === null){
+    if (clientName === null || clientName === ''){
         clientName = "Não informado";
     };
 
